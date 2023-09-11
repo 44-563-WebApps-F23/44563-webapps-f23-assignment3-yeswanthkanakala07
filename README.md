@@ -2,4 +2,6 @@
 # WebApps-F23-Assignment-3
 Assignment 3 - Basic HTML
 
-[Hosted at](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment3-yeswanthkanakala07/) 
+[Hosted at][def] 
+
+[def]: https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment3-yeswanthkanakala07/
