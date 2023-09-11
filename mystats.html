@@ -40,34 +40,61 @@
     <p>Sports have more value than just the face-value physical benefits. I think everyone should play a sport
         long-term. Playing multiple sports can give participants a broad range of skills and coping mechanisms that are
         so valuable in life. The below table suggests some sports that one should play for a healthy living.</p>
-    <table border="2" >
+    <table border="2">
         <tr>
-        <th>Name of the Sport</th>
-        <th>Reason</th>
-        <th> Time spent</th>
-    </tr>
-    <tr>
-        <td>Badminton</td>
-        <td>This game is a workout for the entire body and increases focus.</td>
-        <td>28hrs per week</td>
-    </tr>
-    <tr>
-        <td>Cricket</td>
-        <td>This game allows to gain team co-ordination and mental and physical strength</td>
-        <td>15hrs per week</td>
-    </tr>
-    <tr>
-        <td>Basket Ball</td>
-        <td>Increase Strength and Endurance and hand eye co-ordination.</td>
-        <td>14hrs per week</td>
-    </tr>
-    <tr>
-        <td>Boxing</td>
-        <td>Helps to increase Self Defense techniques, mobility and physical Strength</td>
-        <td>10hrs per week</td>
-    </tr>
+            <th>Name of the Sport</th>
+            <th>Reason</th>
+            <th> Time spent</th>
+        </tr>
+        <tr>
+            <td>Badminton</td>
+            <td>This game is a workout for the entire body and increases focus.</td>
+            <td>28hrs per week</td>
+        </tr>
+        <tr>
+            <td>Cricket</td>
+            <td>This game allows to gain team co-ordination and mental and physical strength</td>
+            <td>15hrs per week</td>
+        </tr>
+        <tr>
+            <td>Basket Ball</td>
+            <td>Increase Strength and Endurance and hand eye co-ordination.</td>
+            <td>14hrs per week</td>
+        </tr>
+        <tr>
+            <td>Boxing</td>
+            <td>Helps to increase Self Defense techniques, mobility and physical Strength</td>
+            <td>10hrs per week</td>
+        </tr>
 
     </table>
+    <hr>
+    <blockquote cite="https://stackoverflow.com/questions/46707570/how-can-allow-a-url-type-from-htaccess-password-protection?rq=3">How can allow a url type from .htaccess password protection?
+        <a
+            href="https://stackoverflow.com/questions/46707570/how-can-allow-a-url-type-from-htaccess-password-protection?rq=3">Source</a>
+    </blockquote>
+    <pre>
+        #allows a single uri through the .htaccess password protection
+        SetEnvIf Request_URI "/testing_uri$" test_uri
+
+        #allows everything if its on a certain host
+        SetEnvIf HOST "^testing.yoursite.com" testing_url
+        SetEnvIf HOST "^yoursite.com" live_url
+        Order Deny,Allow
+
+        AuthName "Restricted Area"
+        AuthType Basic
+        AuthUserFile /path/to/your/.htpasswd
+        AuthGroupFile /
+        Require valid-user
+
+        #Allow valid-user
+        Deny from all
+        Allow from env=test_uri
+        Allow from env=testing_url
+        Allow from env=live_url
+        Satisfy any
+    </pre>
 
 
 </body>
